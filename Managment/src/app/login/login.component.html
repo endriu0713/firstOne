@@ -1,3 +1,9 @@
 <p>
   login works!
 </p>
+
+<div>
+  <input type="text" required [(ngModel)]='login' />
+  <input type="text" required [(ngModel)]='password' />
+  <button (ngModel)='loginClick(login,password)'>Login</button>>
+</div>
