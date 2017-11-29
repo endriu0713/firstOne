@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +10,14 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  // tslint:disable
+  login: string;
+  password: string;
+
+  loginClick(login, password){
+    console.log(login + password)
   }
 
 }

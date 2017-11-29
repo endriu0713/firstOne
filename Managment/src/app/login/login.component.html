@@ -1,9 +1,14 @@
-<p>
-  login works!
-</p>
-
-<div>
-  <input type="text" required [(ngModel)]='login' />
-  <input type="text" required [(ngModel)]='password' />
-  <button (ngModel)='loginClick(login,password)'>Login</button>>
-</div>
+<form class="form-inline">
+  <div class="form-group">
+    <div>
+      <input type="email" class="form-control form-control-lg" required [(ngModel)]='login' name='login' placeholder="Login" />
+    </div>
+    <div>
+      <input type="text" class="form-control form-control-lg" required [(ngModel)]='password' name='password' placeholder="Password"
+      />
+    </div>
+    <div>
+      <button (ngModel)='loginClick(login,password)' class="btn btn-primary btn-lg">Login</button>
+    </div>
+  </div>
+</form>
