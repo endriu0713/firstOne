@@ -1,14 +1,13 @@
 <form class="form-inline">
   <div class="form-group">
     <div>
-      <input type="email" class="form-control form-control-lg" required [(ngModel)]='login' name='login' placeholder="Login" />
+      <input type="text" class="form-control form-control-lg" required [(ngModel)]='login' name='login' placeholder="Login"/>
     </div>
     <div>
-      <input type="text" class="form-control form-control-lg" required [(ngModel)]='password' name='password' placeholder="Password"
-      />
+      <input type="text" class="form-control form-control-lg" required [(ngModel)]='password' name='password' placeholder="Password"/>
     </div>
     <div>
-      <button (ngModel)='loginClick(login,password)' class="btn btn-primary btn-lg">Login</button>
+      <button (click)='loginClick(login,password)' class="btn btn-primary btn-lg">Login</button>
     </div>
   </div>
 </form>

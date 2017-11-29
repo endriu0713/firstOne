@@ -17,7 +17,11 @@ export class LoginComponent implements OnInit {
   password: string;
 
   loginClick(login, password){
-    console.log(login + password)
+    console.log(login + ' / ' + password);
+    this.login = login;
+    this.password = password;
+    console.log(this.login);
   }
+
 
 }
