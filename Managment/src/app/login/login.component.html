@@ -1,13 +1,21 @@
-<form class="form-inline">
+<div class="container">
+<form #form="ngForm" class="form" noValidate>
   <div class="form-group">
     <div>
-      <input type="text" class="form-control form-control-lg" required [(ngModel)]='login' name='login' placeholder="Login"/>
+      <label>Login</label>
+      <input id="name" #login="ngModel" type="text" class="form-control form-control-lg" [(ngModel)]='login' name='name' placeholder="Login"/>
+      <div *ngIf="1">
+        {{ login }}
+      </div>
     </div>
     <div>
-      <input type="text" class="form-control form-control-lg" required [(ngModel)]='password' name='password' placeholder="Password"/>
+      <label>Password</label>
+      <input type="text" class="form-control form-control-lg" [(ngModel)]='password' name='name' placeholder="Password"/>
     </div>
     <div>
-      <button (click)='loginClick(login,password)' class="btn btn-primary btn-lg">Login</button>
+      <button type="submit" (click)="loginClick(login,password)" class="btn btn-primary btn-lg">Login</button>
     </div>
   </div>
 </form>
+</div>
+
